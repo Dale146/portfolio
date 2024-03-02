@@ -1,21 +1,38 @@
-.container{
-    width: 600px;
-    height: 600px;
-    border: 1px solid #000;
-    margin:50px auto 0;
-    position: relative;
+body {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.dot{
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.sky {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    width: 2400px;
+    height: 200px;
+    top: 0;
+    right: 0; /* 初始位置在容器的右侧 */
     
+    animation: move 60s linear infinite;
     
 }
-.container.transition-active{
-    transition:top 3s ease, left 3s ease;
+
+.container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    
+   
+    
 }
-.dot img{
-    width: 50px;
-    height: 50px;
+
+@keyframes move {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -1200px;
+    }
 }
