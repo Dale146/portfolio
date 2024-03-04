@@ -19,7 +19,12 @@ const Home = () => {
       <img className="land" src={land}/>
       <img className="lake" src={lake}/>
       <img className="scape" src={scape}/>
-      <div className="dog"></div>
+      <div className="dog">
+          <img src={dog} alt="dog"/>
+            <dialog id="dog-dialog">
+              <p>lorem</p>
+            </dialog>
+       </div>
       </div>
     </div>
   );
