@@ -5,10 +5,23 @@ import land from "../images/2.png";
 import lake from "../images/3.png";
 import scape from "../images/4.png";
 import dog from "../images/Idle.png";
+import Modal from "../components/modal";
+import Typewriter from "../components/typeWriter";
+
 
 const Home = () => {
-  // 初始化 dot 的初始位置
 
+
+
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const handleOpenModal = () => {
+      setModalOpen(true);
+    };
+  
+    const handleCloseModal = () => {
+      setModalOpen(false);
+    };
 
   return (
     <div className="home">
@@ -20,14 +33,15 @@ const Home = () => {
       <img className="lake" src={lake}/>
       <img className="scape" src={scape}/>
       <div className="dog">
-          <img src={dog} alt="dog"/>
-            <dialog id="dog-dialog">
-              <p>lorem</p>
-            </dialog>
+          <img src={dog} alt="dog" onClick={handleOpenModal}/>
        </div>
+          <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+            <p><Typewriter text="This is my prarasdasdsadjsadbhasjdsagddsadsadsadsadsadsadsadsadsa" delay={10}/></p>
+          </Modal>
       </div>
     </div>
   );
 };
+
 
 export default Home;
