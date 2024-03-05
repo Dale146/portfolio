@@ -1,0 +1,26 @@
+// limit the div for the dog image, so that only show one image.
+.dog{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: 5px -20px;
+    right: 70%;
+    bottom: 10%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+    
+}
+// make the image larger
+// and animation
+.dog img{
+    width: 500px;
+    position: absolute;
+    bottom: 20%;
+    left: 0%;
+    animation: flow 0.5s step-start infinite;
+    
+    
+}
