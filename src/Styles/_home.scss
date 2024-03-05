@@ -70,6 +70,12 @@ img {
     position: absolute;
     bottom: 0;
 }
+.button{
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    width: 500px;
+}
 
 @keyframes move {
     0% {

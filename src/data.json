@@ -4,6 +4,17 @@
         "option-1":"Start Knowing Me",
         "option-2":"Projects",
         "option-3":"Contact Me"
-    }
+    },
+    "dog":[
+        "this is paragraph 1",
+        "this is paragraph 2",
+        "this is paragraph 3"
+    ],
+    "secondString":[
+        "sahdujnasikdsa",
+        "ashdiksadsadadd",
+        "1298371312",
+        "123487y912asdas"
+    ]
+
   }
-  
