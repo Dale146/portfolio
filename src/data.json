@@ -5,16 +5,33 @@
         "option-2":"Projects",
         "option-3":"Contact Me"
     },
-    "dog":[
-        "this is paragraph 1",
-        "this is paragraph 2",
-        "this is paragraph 3"
-    ],
-    "secondString":[
-        "sahdujnasikdsa",
-        "ashdiksadsadadd",
-        "1298371312",
-        "123487y912asdas"
-    ]
+    "dog":{
+        "name":"dog",
+        "paragraphs":[
+            "this is paragraph 1",
+            "this is paragraph 2",
+            "this is paragraph 3"
+        ],
+        "more":[
+            "more 1",
+            "more 2",
+            "more 3"
+        ]
+        
+        },
+    "secondString":{
+        "name":"this is the name",
+        "paragraphs":[
+            "sahdujnasikdsa",
+            "ashdiksadsadadd",
+            "1298371312",
+            "123487y912asdas"
+        ],
+        "more":[
+            "萨达杀的撒旦阿斯顿阿三",
+            "阿斯顿撒撒旦sadhu哦耨大厦的",
+            "啊是第几骚客大苏打飒飒"
+        ]
+    }
 
   }
