@@ -44,6 +44,7 @@ const Home = () => {
     if (currentIndex < selectString.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setModalText(selectString[currentIndex + 1]);
+      console.log(selectString)
     } else {
       console.log(selectString[currentIndex]);
     }
@@ -63,6 +64,8 @@ const Home = () => {
     setCurrentIndex(0);
     setModalText(array[0]);
     setModalOpen(true);
+    console.log(modalText)
+    console.log(selectString)
     console.log(dogTrigger)
     // switch by name of the array
     switch (name){
