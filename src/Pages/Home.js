@@ -44,7 +44,7 @@ const Home = () => {
     if (currentIndex < selectString.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setModalText(selectString[currentIndex + 1]);
-      console.log(selectString)
+      
     } else {
       console.log(selectString[currentIndex]);
     }
@@ -64,9 +64,7 @@ const Home = () => {
     setCurrentIndex(0);
     setModalText(array[0]);
     setModalOpen(true);
-    console.log(modalText)
-    console.log(selectString)
-    console.log(dogTrigger)
+
     // switch by name of the array
     switch (name){
       case "dog":
@@ -99,16 +97,16 @@ const Home = () => {
   const handleCloseModal = () => {
     setModalOpen(false);
     setCurrentIndex(0);
-    console.log(dogTrigger)
+    
     
   };
 
   return (
     <div className="home">
       {/* give the array and the name */}
-      <button className="other" onClick={() => handleOpenModal(secondString, secondName, secondParagraph)}>
+      {/* <button className="other" onClick={() => handleOpenModal(secondString, secondName, secondParagraph)}>
         other
-      </button>
+      </button> */}
       <div className="container">
         <div>
           <img className="sky" src={sky1} alt="sky" />
@@ -128,9 +126,9 @@ const Home = () => {
           <button onClick={showNextParagraph}>111</button>
           {/* use select name */}
           <p>{selectName}</p>
-          <p>
+          <p className="typewriter-content">
             {/* use modal text */}
-            <Typewriter key={modalText} text={modalText} />
+            <Typewriter key={modalText} text={modalText} delay={10}/>
           </p>
         </Modal>
       </div>
