@@ -25,12 +25,20 @@
     
 }
 
-.content .my-stats,
-.my-story,
-.my-menu{
-    display: none;
-}
+
 
 .show-component{
     display: block;
+}
+
+.hide-component{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
+
+.hide-initial-content{
+    display: none;
 }

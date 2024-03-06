@@ -1,14 +1,17 @@
 import React from "react";
 
-const Mymenu = () => {
+const Mymenu = ({ onSelectComponent }) => {
 
+    const handleButtonClick = (component) => {
+        onSelectComponent(component);
+    };
 
     return (
         <div className="my-menu">
-            <button>story</button>
-            <button>stats</button>
+            <button onClick={() => handleButtonClick("story")}>story</button>
+            <button onClick={() => handleButtonClick("stats")}>stats</button>
         </div>
-    )
+    );
 };
 
-export default  Mymenu;
+export default Mymenu;
