@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import Typewriter from "../components/typeWriter";
 import Mystats from "../components/stats";
 import Story from "../components/story";
 import Mymenu from "../components/menu";
 import tian from "../images/tiantian.jpg";
+import data from "../data.json";
 
 const About = () => {
     // set show menu to false
@@ -11,7 +13,7 @@ const About = () => {
     const [hideContent, setHideContent] = useState(true);
     // initial component parameter is null
     const [selectedComponent, setSelectedComponent] = useState(null);
-
+    const optionsMenu = data.options[0];
     // run function when menu is clicked
     const displayComponent = (component) => {
         // make initial content only display once.
@@ -21,7 +23,6 @@ const About = () => {
         // set the selected component string from the MENU component.
         setSelectedComponent(component);
 
-        console.log(component)
     };
 
     return (
@@ -44,10 +45,16 @@ const About = () => {
                     <div className={`${showMenu ? "show-component" : "hide-component"}`}>
                         <Mymenu onSelectComponent={displayComponent} />
                     </div>
+                    {selectedComponent != null && (
+                    <div className="insde-content">
+                        
+                        <h2>{optionsMenu[selectedComponent].title}</h2>
+                        <p>
+                        <Typewriter text={optionsMenu[selectedComponent].description} delay={10}/></p>
+                    </div>
+                    )}
 
-                    {/* if selectedComponent === "value", display the component */}
-                    {selectedComponent === "Story" && <Story />}
-                    {selectedComponent === "stats" && <Mystats />}
+
                 </section>
 
                 <section className="bottom-nav">
