@@ -4,31 +4,40 @@
     align-items: center;
     justify-content: center;
     
+    
 }
-.image-container{
-    max-height: 30vh;
-    overflow: hidden;
-}
-.image-container img {
-    object-position:0 -190px;
-}
-
-.content{
+.about-content{
     height: 65vh;
     overflow: auto;
+
+    width: 100%;
+}
+.inside-content{
+    display: flex;
+    flex-direction: column;
     margin-left: 1rem;
     margin-right: 1rem;
 }
-
-.bottom-nav{
-    height: 5vh;
-    
+// images in the about
+.about-image-container{
+    max-height: 30vh;
+    overflow: hidden;
+}
+// move the image position
+.about-image-container img {
+    object-position:0 -190px;
 }
 
 
+.bottom-nav{
+    height: 5vh;
+}
 
+
+// show and hide classes
 .show-component{
     display: block;
+    animation: slideInFromBottom 1s ease-in-out;
 }
 
 .hide-component{

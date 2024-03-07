@@ -8,23 +8,23 @@ import Backgrounds from "../components/background";
 import dog1 from "../images/dog1.png";
 
 // import json data
-import data from "../data.json";
+import homeData from "../jsonData/home.json";
 
 
 
 const Home = () => {
   // import array from json file
-  const dogString = data.dog.paragraphs;
-  const secondString = data.secondString.paragraphs;
-  const dogName = data.dog.name;
-  const secondName = data.secondString.name;
-  const dogMoreString = data.dog.more;
-  const secondParagraph = data.secondString.more;
+  const dogString = homeData.dog.paragraphs;
+  const secondString = homeData.secondString.paragraphs;
+  const dogName = homeData.dog.name;
+  const secondName = homeData.secondString.name;
+  const dogMoreString = homeData.dog.more;
+  const secondParagraph = homeData.secondString.more;
 
   // select the name thats used
   const [selectName, setSelectName] = useState("");
 
-  // trigger is same function triggered twice
+  // if same trigger is used twice, set true
   const [dogTrigger, setDogTrigger] = useState(false);
   const [secondTrigger, setSecondTrigger] = useState(false);
 
@@ -49,18 +49,16 @@ const Home = () => {
     if (currentIndex < selectString.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setModalText(selectString[currentIndex + 1]);
-      
     } else {
       
-    }
-  };
+    }};
 
   // Check if the modal is open
   const [isModalOpen, setModalOpen] = useState(false);
 
   // OnClick function to open the modal
   // the parameter are the arrays and the names
-  const handleOpenModal = (array, name, array2) => {
+  const handleOpenModal = (array, name, secondArray) => {
     // change the name of the array
     setSelectName(name)
     // change the array
@@ -71,31 +69,31 @@ const Home = () => {
     setModalOpen(true);
     
     // switch by name of the array
-    switch (name){
-      case "dog":
-        if (dogTrigger === false){
-           setDogTrigger(true);
-        }else{
-          setCurrentIndex(0);
-          setModalText(array2[0]);
-          setSelectString(array2);
-        };
-        break;
-        
-      case "this is the name":
-        if(secondTrigger === false){
-          setSecondTrigger(true);
+      switch (name){
+        case "dog":
+          if (dogTrigger === false){
+            setDogTrigger(true);
+          }else{
+            setCurrentIndex(0);
+            setModalText(secondArray[0]);
+            setSelectString(secondArray);
+          };
+          break;
+          
+        case "this is the name":
+          if(secondTrigger === false){
+            setSecondTrigger(true);
 
-        }else{
-          setCurrentIndex(0);
-          setModalText(array2[0]);
-          setSelectString(array2);
-        }
-        break;
-        
-        default:
-        return null;
-    };
+          }else{
+            setCurrentIndex(0);
+            setModalText(secondArray[0]);
+            setSelectString(secondArray);
+          }
+          break;
+          
+          default:
+          return null;
+      };
   };
 
   // OnClick function to close the modal
@@ -118,17 +116,14 @@ const Home = () => {
           <img
             src={dog1}
             alt="tiantian"
-            onClick={() => handleOpenModal(dogString, dogName, dogMoreString)}
-          />
+            onClick={() => handleOpenModal(dogString, dogName, dogMoreString)}/>
         </div>
-        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-          <button onClick={showNextParagraph}>111</button>
+        <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
+          
           {/* use select name */}
           <p>{selectName}</p>
-          <p className="typewriter-content">
             {/* use modal text */}
-            <Typewriter key={modalText} text={modalText} delay={50}/>
-          </p>
+          <p className="typewriter-content"><Typewriter key={modalText} text={modalText} delay={50}/> </p>
         </Modal>
       </div>
     </div>

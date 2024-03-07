@@ -23,3 +23,18 @@
     }
 
 }
+// animation for menu slide in.
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(80vh);
+    }
+    50%{
+        transform: translateY(75);
+    }
+    75%{
+        transform: translateY(0);
+    }
+    100% {
+      transform: translateY(20%);
+    }
+  }

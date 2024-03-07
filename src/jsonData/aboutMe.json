@@ -1,0 +1,24 @@
+{
+    "options":[
+        {
+        "stats":{
+            "title":"Dale",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibus gravida augue rutrum vitae. Curabitur turpis turpis, sagittis in aliquet at, tempor nec elit. Praesent tincidunt auctor vehicula. Phasellus auctor odio nibh."
+        },
+        "story":{
+            "title":"Story",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibu."
+        },
+        "background":{
+            "title":"background",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibu.",
+            "school":"bcit"
+            
+        },
+        "random":{
+            "title":"this is the title",
+            "description":"tjos oashdasdsa"
+        }
+    }
+]
+}

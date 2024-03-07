@@ -1,6 +1,6 @@
 import React from "react";
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose,nextParagraph, children }) => {
   if (!isOpen) {
     return null;
   }
@@ -11,6 +11,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         <button className="modal-close" onClick={onClose}>
           Close
         </button>
+        <button className="next-paragraph" onClick={nextParagraph}>next</button>
         {children}
       </div>
     </div>
