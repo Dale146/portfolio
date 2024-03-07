@@ -20,6 +20,8 @@ const About = () => {
         setShowMenu(!showMenu);
         // set the selected component string from the MENU component.
         setSelectedComponent(component);
+
+        console.log(component)
     };
 
     return (
@@ -44,7 +46,7 @@ const About = () => {
                     </div>
 
                     {/* if selectedComponent === "value", display the component */}
-                    {selectedComponent === "story" && <Story />}
+                    {selectedComponent === "Story" && <Story />}
                     {selectedComponent === "stats" && <Mystats />}
                 </section>
 
