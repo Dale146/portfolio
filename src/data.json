@@ -32,6 +32,23 @@
             "阿斯顿撒撒旦sadhu哦耨大厦的",
             "啊是第几骚客大苏打飒飒"
         ]
+    },
+    "options":[
+        {
+        "stats":{
+            "title":"Dale",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibus gravida augue rutrum vitae. Curabitur turpis turpis, sagittis in aliquet at, tempor nec elit. Praesent tincidunt auctor vehicula. Phasellus auctor odio nibh."
+        },
+        "Story":{
+            "title":"Story",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibu."
+        },
+        "background":{
+            "title":"background",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibu."
+        }
     }
+]
+    
 
   }

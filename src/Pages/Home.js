@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Modal from "../components/modal";
 import Typewriter from "../components/typeWriter";
-import sky1 from "../images/1.png";
-import land from "../images/2.png";
-import lake from "../images/3.png";
-import scape from "../images/4.png";
-import dog from "../images/Idle.png";
+import Backgrounds from "../components/background";
+
+// import images
+
+import dog1 from "../images/dog1.png";
+
 // import json data
 import data from "../data.json";
 
@@ -22,13 +23,17 @@ const Home = () => {
 
   // select the name thats used
   const [selectName, setSelectName] = useState("");
+
   // trigger is same function triggered twice
   const [dogTrigger, setDogTrigger] = useState(false);
   const [secondTrigger, setSecondTrigger] = useState(false);
+
   // select the array thats used
   const [selectString, setSelectString] = useState([]);
+
   // for choosing the array number
   const [currentIndex, setCurrentIndex] = useState(0);
+
   // made for change the text in the modal
   const [modalText,setModalText] = useState(selectString[0]);
 
@@ -46,7 +51,7 @@ const Home = () => {
       setModalText(selectString[currentIndex + 1]);
       
     } else {
-      console.log(selectString[currentIndex]);
+      
     }
   };
 
@@ -60,11 +65,11 @@ const Home = () => {
     setSelectName(name)
     // change the array
     setSelectString(array);
-    // set the index to 0 just to reset
+    // set the index to 0 to reset
     setCurrentIndex(0);
     setModalText(array[0]);
     setModalOpen(true);
-
+    
     // switch by name of the array
     switch (name){
       case "dog":
@@ -108,17 +113,11 @@ const Home = () => {
         other
       </button> */}
       <div className="container">
-        <div>
-          <img className="sky" src={sky1} alt="sky" />
-        </div>
-        <img className="land" src={land} alt="land" />
-        <img className="lake" src={lake} alt="lake" />
-        <img className="scape" src={scape} alt="scape" />
-
+        <Backgrounds/>
         <div className="dog">
           <img
-            src={dog}
-            alt="dog"
+            src={dog1}
+            alt="tiantian"
             onClick={() => handleOpenModal(dogString, dogName, dogMoreString)}
           />
         </div>
@@ -128,7 +127,7 @@ const Home = () => {
           <p>{selectName}</p>
           <p className="typewriter-content">
             {/* use modal text */}
-            <Typewriter key={modalText} text={modalText} delay={10}/>
+            <Typewriter key={modalText} text={modalText} delay={50}/>
           </p>
         </Modal>
       </div>
