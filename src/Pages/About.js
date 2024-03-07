@@ -48,7 +48,6 @@ const About = () => {
                     <div className="inside-content">
                         <h2>{optionsMenu[selectedComponent].title}</h2>
                         <p><Typewriter text={optionsMenu[selectedComponent].description} delay={10}/></p>
-
                     </div>
                     )}
                 </section>
