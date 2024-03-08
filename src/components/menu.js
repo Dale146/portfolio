@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../data.json";
+import data from "../jsonData/aboutMe.json";
 
 const Mymenu = ({ onSelectComponent }) => {
   const optionsArray = data.options;

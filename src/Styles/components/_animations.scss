@@ -38,3 +38,31 @@
       transform: translateY(20%);
     }
   }
+
+  // animation for slide left and right
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-left {
+    animation: slideInFromLeft 0.5s ease-in-out;
+  }
+  
+  .slide-in-right {
+    animation: slideInFromRight 0.5s ease-in-out;
+  }
+  

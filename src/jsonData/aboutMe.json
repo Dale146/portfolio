@@ -20,5 +20,23 @@
             "description":"tjos oashdasdsa"
         }
     }
-]
+    
+],
+    "kits":[
+        {
+            "HTML":{
+                "imgSrc":"html.svg",
+                "imgAlt":"HTML"
+            },
+            "CSS":{
+                "imgSrc":"css.svg",
+                "imgAlt":"CSS"
+            },
+            "React":{
+                "imgSrc":"react.svg",
+                "imgAlt":"React"
+            }
+            
+        }
+    ]
 }
