@@ -1,8 +1,25 @@
-import React from "react";
-import data from "../jsonData/aboutMe.json";
+import React, { useEffect, useState } from "react";
 
 const Mymenu = ({ onSelectComponent }) => {
-  const optionsArray = data.options;
+  // fetch json
+  const [fetchedData, setFetchedData] = useState({});
+  
+  // change the status of data
+  useEffect(() => {
+    fetch('data/aboutMe.json')
+      .then((response) => response.json())
+      .then((data) => {
+        // set fetchedData = data
+        setFetchedData(data);
+      })
+      .catch((error) => {
+        console.log('failed fetching data', error);
+      });
+  }, []);
+  
+  // Ensure optionsArray is an array
+  const optionsArray = fetchedData.options || []; 
+  console.log(optionsArray);
 
   const handleButtonClick = (component) => {
     onSelectComponent(component);

@@ -1,12 +1,26 @@
 import React, { useState,useEffect } from "react";
 import Typewriter from "../components/typeWriter";
-
 import Mymenu from "../components/menu";
 import MyKits from "../components/kits";
 import tian from "../images/tiantian.jpg";
-import aboutMeData from "../jsonData/aboutMe.json";
+
 
 const About = () => {
+    // fetch json
+    const [fetchedData, setFetchedData] = useState({});
+  
+    // change the status of data
+    useEffect(() => {
+      fetch('data/aboutMe.json')
+        .then((response) => response.json())
+        .then((data) => {
+          // set fetchedData = data
+          setFetchedData(data);
+        })
+        .catch((error) => {
+          console.log('failed fetching data', error);
+        });
+    }, []);
     
     // boolean used for my-kits and about-me section
     const [showComponent,setShowComponent] = useState(true);
@@ -23,7 +37,10 @@ const About = () => {
     const [hideContent, setHideContent] = useState(true);
     // initial component parameter is null
     const [selectedComponent, setSelectedComponent] = useState(null);
-    const optionsMenu = aboutMeData.options[0];
+    // if fetchedData.options has values, and its not null or undefined, access [0].
+    const optionsMenu = (fetchedData.options && fetchedData.options[0]) || [];
+
+
     // run function when menu is clicked
     const displayComponent = (component) => {
         // make initial content only display once.
@@ -101,7 +118,10 @@ const About = () => {
                             <p><Typewriter text={optionsMenu[selectedComponent].description} delay={10}/></p>
                         </div>
                         )}
-                            
+                        {/* Show fill-content when initial-content and showMenu are both hidden */}
+                        {(!hideContent && !showMenu && selectedComponent == null) && (
+                          <div className="fill-content"></div>
+                        )} 
                         <section className="bottom-nav">
                         <button>back</button>
                         {/* give the value of null */}

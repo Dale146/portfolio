@@ -18,10 +18,6 @@
         "random":{
             "title":"this is the title",
             "description":"tjos oashdasdsa"
-        },
-        "sadas":{
-            "title":"sadsa",
-            "description":"asdsa"
         }
     }
     
@@ -29,15 +25,15 @@
     "kits":[
         {
             "HTML":{
-                "imgSrc":"../images/html.svg",
+                "imgSrc":"images/html.svg",
                 "imgAlt":"HTML"
             },
             "CSS":{
-                "imgSrc":"css.svg",
+                "imgSrc":"images/css.svg",
                 "imgAlt":"CSS"
             },
             "React":{
-                "imgSrc":"react.svg",
+                "imgSrc":"images/react.svg",
                 "imgAlt":"React"
             }
             
