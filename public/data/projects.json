@@ -1,0 +1,22 @@
+{
+    "projects":[
+        {
+            "MovieSquirrel": {
+                "title":"MovieSquirrel",
+                "imgSrc":"images/html.svg",
+                "mainTools":"React, Rest API, Sass"
+            },
+            "Bubble-Lab":{
+                "title":"Bubble Lab",
+                "imgSrc":"images/react.svg",
+                "mainTools":"WordPress, PHP, Sass"
+            },
+            "Portfolio":{
+                "title":"Portfolio Site",
+                "imgSrc":"images/css.svg",
+                "mainTools":"React, Fetch API, Sass"
+            }
+        }
+        
+    ]
+}
