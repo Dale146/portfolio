@@ -1,4 +1,5 @@
 import React from "react";
+import close from "../images/icons/Chevron-Arrow-Down.svg"
 
 const Modal = ({ isOpen, onClose,nextParagraph, children }) => {
   if (!isOpen) {
@@ -7,12 +8,12 @@ const Modal = ({ isOpen, onClose,nextParagraph, children }) => {
 
   return (
     <div className="modal-overlay">
-      <div className="modal">
-        <button className="modal-close" onClick={onClose}>
-          Close
-        </button>
-        <button className="next-paragraph" onClick={nextParagraph}>next</button>
+      <div className="modal" onClick={nextParagraph}>
+       
         {children}
+        
+          <img src={close} alt="close" className="modal-close" onClick={onClose}/>
+        
       </div>
     </div>
   );

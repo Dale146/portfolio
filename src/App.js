@@ -8,9 +8,9 @@ import "./style.scss";
 function App() {
   return (
     <main>
-      {/* <Home/> */}
+      <Home/>
       {/* <About/> */}
-      <Projects/>
+      {/* <Projects/> */}
     </main>
   );
 }

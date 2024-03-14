@@ -7,22 +7,46 @@ import Backgrounds from "../components/background";
 
 import dog1 from "../images/dog1.png";
 
-// import json data
-import homeData from "../jsonData/home.json";
+
 
 
 
 const Home = () => {
+
+    // fetch json
+    const [fetchedData, setFetchedData] = useState({});
+  
+    // change the status of data
+    useEffect(() => {
+      fetch('data/home.json')
+        .then((response) => response.json())
+        .then((data) => {
+          // set fetchedData = data
+          setFetchedData(data);
+        })
+        .catch((error) => {
+          console.log('failed fetching data', error);
+        });
+    }, []);
+  
+    // Ensure toolIcons is an array
+    const homeArrays = fetchedData || [];
+
+
   // import array from json file
-  const dogString = homeData.dog.paragraphs;
-  const secondString = homeData.secondString.paragraphs;
-  const dogName = homeData.dog.name;
-  const secondName = homeData.secondString.name;
-  const dogMoreString = homeData.dog.more;
-  const secondParagraph = homeData.secondString.more;
+  const dogString = homeArrays && homeArrays.dog && homeArrays.dog.paragraphs;
+  const dogAvatar = homeArrays && homeArrays.dog && homeArrays.dog.avatar;
+  const secondString = homeArrays && homeArrays.secondString && homeArrays.secondString.paragraphs;
+  const dogName = homeArrays && homeArrays.dog && homeArrays.dog.name;
+  const secondName = homeArrays && homeArrays.secondString && homeArrays.secondString.name;
+  const dogMoreString = homeArrays && homeArrays.dog && homeArrays.dog.more;
+  const secondParagraph = homeArrays && homeArrays.secondString && homeArrays.secondString.more;
+  
 
   // select the name thats used
   const [selectName, setSelectName] = useState("");
+
+  const [selectAvatar, setSelectAvatar] = useState("");
 
   // if same trigger is used twice, set true
   const [dogTrigger, setDogTrigger] = useState(false);
@@ -58,9 +82,11 @@ const Home = () => {
 
   // OnClick function to open the modal
   // the parameter are the arrays and the names
-  const handleOpenModal = (array, name, secondArray) => {
+  const handleOpenModal = (array, name, secondArray, avatar) => {
     // change the name of the array
-    setSelectName(name)
+    setSelectName(name);
+
+    setSelectAvatar(avatar);
     // change the array
     setSelectString(array);
     // set the index to 0 to reset
@@ -116,12 +142,15 @@ const Home = () => {
           <img
             src={dog1}
             alt="tiantian"
-            onClick={() => handleOpenModal(dogString, dogName, dogMoreString)}/>
+            onClick={() => handleOpenModal(dogString, dogName, dogMoreString, dogAvatar)}/>
         </div>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
-          
+          <div className="modal-avatar">
+
+          <img src={selectAvatar} alt={selectName}/>
           {/* use select name */}
           <p>{selectName}</p>
+          </div>
             {/* use modal text */}
           <p className="typewriter-content"><Typewriter key={modalText} text={modalText} delay={50}/> </p>
         </Modal>

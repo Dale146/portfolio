@@ -1,9 +1,71 @@
 .modal{
-    border: solid 1px black;
+    border: solid 6px #8c7957;
     width: 100%;
     height: 15vh;
-    background-color: white;
+    background-image: linear-gradient(to right, rgb(203, 174, 139), rgb(238, 208, 165), rgb(203, 174, 139));
     position: absolute;
     bottom: 0;
+    display: flex;
+ 
+
     
+    
+    .modal-close{
+        width: 40px;
+        position: absolute;
+        top: 10%;
+        right: 1%;
+    }
+}
+.modal-avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 0.3rem;
+    padding-right:20px;
+    padding-top: 0;
+    
+    
+    
+    
+
+    img{
+        width: 90%;
+        flex-grow: 1;
+        height: auto;
+        overflow: hidden;
+        
+        
+
+    }
+    p{
+        margin: 0;
+        max-width: 90%;
+        width: 90%;
+        margin-bottom: -20px;
+        text-align: center;
+        
+        
+        
+
+        
+    }
+    
+}
+.typewriter-content{
+    width: 80%;
+    
+}
+
+
+@media screen and (max-width: 800px) {
+    .modal-avatar{
+        img{
+            width: 90%;
+            flex-grow: 0;
+            max-height: 100%;
+        }
+    }
 }
