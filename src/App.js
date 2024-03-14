@@ -8,8 +8,8 @@ import "./style.scss";
 function App() {
   return (
     <main>
-      <Home/>
-      {/* <About/> */}
+      {/* <Home/> */}
+      <About/>
       {/* <Projects/> */}
     </main>
   );
