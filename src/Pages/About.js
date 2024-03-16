@@ -3,6 +3,10 @@ import Typewriter from "../components/typeWriter";
 import Mymenu from "../components/menu";
 import MyKits from "../components/kits";
 import tian from "../images/tiantian.jpg";
+import upArrow from "../images/icons/iconmonstr-caret-up-circle-lined.svg";
+import leftArrow from "../images/icons/iconmonstr-angel-left-thin.svg";
+import rightArrow from "../images/icons/iconmonstr-angel-right-thin.svg";
+import Home from "../images/icons/iconmonstr-home-7.svg";
 
 
 const About = () => {
@@ -90,48 +94,64 @@ const About = () => {
                     <img src={tian} alt="tiantian"/>
                 </section>
 
-                {/* ----------------------------the container to make the button out of the animation class, so that it is not flipped-------------------------------- */}
-                <div className="animation-flex">
-                <button onClick={handleDisplayContentLeft}>left</button>
-                {/* ____________________________The container for the content, kits and menu___________________ */}
-                <section className={`about-content ${animationClass}`}>
-                    {/* kits component. initial display is none. If showComponent is true, display */}
-                    <div className={`kits-component ${showComponent ? "hide-status-kits" : "display-status-kits"}`}>
-                    <MyKits/>
-                    </div>
-                    {/* Aboutme-section. Initial display is block. If showComponent is false, hide. */}
-                    <div className={`status-component ${showComponent ? "display-status-kits" : "hide-status-kits"}`}>
+                  {/* ----------------------------the container to make the button out of the animation class, so that it is not flipped-------------------------------- */}
+                  <div className="animation-flex">
+                  <button className="left-right-arrow" onClick={handleDisplayContentLeft}>
+                    <img className="btn-svg" src={leftArrow} alt="leftArrow"/>
+                  </button>
+                  {/* ____________________________The container for the content, kits and menu___________________ */}
+                  <section className={`about-content ${animationClass}`}>
+                      {/* kits component. initial display is none. If showComponent is true, display */}
+                      <div className={`kits-component ${showComponent ? "hide-status-kits" : "display-status-kits"}`}>
+                      <MyKits/>
+                      </div>
+                      {/* Aboutme-section. Initial display is block. If showComponent is false, hide. */}
+                      <div className={`status-component ${showComponent ? "display-status-kits" : "hide-status-kits"}`}>
 
-                        {/* give class if true/false */}
-                        <div className={`${hideContent ? "initial-content" : "hide-initial-content"}`}>
-                        <p>...</p>
-                        </div>
-                        {/* give class if true/false */}
-                        <div className={`${showMenu ? "show-component" : "hide-component"}`}>
-                            <Mymenu onSelectComponent={displayComponent} />
-                        </div>
+                          {/* give class if true/false */}
+                          <div className={`${hideContent ? "initial-content" : "hide-initial-content"}`}>
+                          <p>...</p>
+                          </div>
+                          {/* give class if true/false */}
+                          <div className={`${showMenu ? "show-component" : "hide-component"}`}>
+                              <Mymenu onSelectComponent={displayComponent} />
+                          </div>
 
-                        {/* if selectedComponent is not = to null, run the value of selectedComponent.  */}
-                        {selectedComponent != null && (
-                            <div className="inside-content">
-                            <h2>{optionsMenu[selectedComponent].title}</h2>
-                            <p><Typewriter text={optionsMenu[selectedComponent].description} delay={10}/></p>
-                        </div>
-                        )}
-                        {/* Show fill-content when initial-content and showMenu are both hidden */}
-                        {(!hideContent && !showMenu && selectedComponent == null) && (
-                          <div className="fill-content"></div>
-                        )} 
-                        <section className="bottom-nav">
-                        <button>back</button>
-                        {/* give the value of null */}
-                        <button onClick={() => displayComponent(null)}>menu</button>
-                         </section>
-                    </div>
-                </section>
-                {/* ____________________________The container for the content, kits and menu___________________ */}
-                    <button onClick={handleDisplayContentRight}>right</button>
-                    {/* ----------------------------the container to make the button out of the animation class, so that it is not flipped-------------------------------- */}
+                          {/* if selectedComponent is not = to null, run the value of selectedComponent.  */}
+                          {selectedComponent != null && (
+                              <div className="inside-content">
+                              <h2>{optionsMenu[selectedComponent].title}</h2>
+                              <p><Typewriter text={optionsMenu[selectedComponent].description} delay={10}/></p>
+                          </div>
+                          )}
+                          {/* Show fill-content when initial-content and showMenu are both hidden */}
+                          {(!hideContent && !showMenu && selectedComponent == null) && (
+                            <div className="fill-content"></div>
+                          )} 
+                          <section className="bottom-nav">
+                            <div className="btn-container">
+
+                            <button className="back-btn">
+                              <img src={Home} alt="home"/>
+                            </button>
+                            {/* give the value of null */}
+                            <button className="menu-btn" onClick={() => displayComponent(null)}>
+                              <img className="arrow-icon" src={upArrow} alt="uparrow"/>
+                            </button>
+                            </div>
+                          </section>
+                      </div>
+                  </section>
+                  {/* ____________________________The container for the content, kits and menu___________________ */}
+                      <button className="left-right-arrow" onClick={handleDisplayContentRight}>
+                        <img className="btn-svg" src={rightArrow} alt="rightArrow" />
+                      </button>
+                      {/* ----------------------------the container to make the button out of the animation class, so that it is not flipped-------------------------------- */}
+                  </div>
+                  <div className="gradient-background">
+                <div class="circle circle-left-bottom"></div>
+                <div class="circle circle-right-top"></div>
+                <div class="circle circle-left-top"></div>
                 </div>
             </div>
         </div>

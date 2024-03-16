@@ -30,10 +30,10 @@ const Mymenu = ({ onSelectComponent }) => {
       {optionsArray.map((option, index) => {
         const optionKeys = Object.keys(option);
 
-        return (
+        return (                                                  
           <div className="menu-options" key={index}>
             {optionKeys.map((key) => (
-              <button key={key} onClick={() => handleButtonClick(key)}>
+              <button className="btns" key={key} onClick={() => handleButtonClick(key)}>
                 {key}
               </button>
             ))}
