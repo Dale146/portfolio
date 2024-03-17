@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import exm1 from "../images/movie.png";
 
 const MobileProjects = () => {
   // fetch json
@@ -23,7 +24,7 @@ const MobileProjects = () => {
 
   return (
     <div className="mobile-projects">
-        {projects.map((project, index) => {
+        {/* {projects.map((project, index) => {
         const projectKeys = Object.keys(project);
 
         return (
@@ -36,8 +37,24 @@ const MobileProjects = () => {
               </div>
               ))}
           </div>
+          
         );
-      })}
+      })} */}
+      <div className="box">
+        
+        <div className="circle-1"></div>
+        <h2>The movie database</h2>
+        <div className="box-container-2">
+
+        <img src={exm1} alt="exm1"></img>
+        <ul>
+          <li>React</li>
+          <li>Sass</li>
+          <li>Rest API</li>
+        </ul>
+        </div>
+        
+      </div>
       <button>Home</button>
     </div>
   );

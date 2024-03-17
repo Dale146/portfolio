@@ -35,6 +35,7 @@ $circle-size: 200px;
       height: $circle-size;
       background-color: #81c784; 
       filter: blur(5px); 
+    }
     &.circle-left-top {
       left: 20%;
       transform: translateX(-50%);
@@ -44,7 +45,6 @@ $circle-size: 200px;
       background-color: #ffb74d; 
       filter: blur(5px); 
     }
-  }
 }
 
 @keyframes horizontal-animation{
