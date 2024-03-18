@@ -3,18 +3,33 @@
         {
             "MovieSquirrel": {
                 "title":"MovieSquirrel",
-                "imgSrc":"images/html.svg",
-                "mainTools":"React, Rest API, Sass"
+                "imgSrc":"images/movie.png",
+                "mainTools":[
+                    "react",
+                    "sass",
+                    "github"
+                ],
+                "year":"2024"
             },
             "Bubble-Lab":{
                 "title":"Bubble Lab",
                 "imgSrc":"images/react.svg",
-                "mainTools":"WordPress, PHP, Sass"
+                "mainTools":[
+                    "Wordpress",
+                    "PHP",
+                    "github"
+                ],
+                "year":"2024"
             },
             "Portfolio":{
                 "title":"Portfolio Site",
                 "imgSrc":"images/css.svg",
-                "mainTools":"React, Fetch API, Sass"
+                "mainTools":[
+                    "react",
+                    "sass",
+                    "Fetch API"
+                ],
+                "year":"2024"
             }
         }
         

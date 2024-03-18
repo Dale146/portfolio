@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import exm1 from "../images/movie.png";
+
 
 const MobileProjects = () => {
   // fetch json
@@ -24,37 +24,29 @@ const MobileProjects = () => {
 
   return (
     <div className="mobile-projects">
-        {/* {projects.map((project, index) => {
+        {projects.map((project, index) => {
         const projectKeys = Object.keys(project);
 
         return (
           <div key={index}>
             {projectKeys.map((key) => (
-              <div key={key} className="mobile-project-container">
+              <div key={key} className="box">
               <img src={project[key].imgSrc} alt={project[key].imgAlt} />
-              <h2>{project[key].title}</h2>
-              <span>{project[key].mainTools}</span>
+              <h4>{project[key].title}</h4>
+              <ul>
+                {project[key].mainTools && project[key].mainTools.map((tool,i) => (
+                  <li key={i}>{tool}</li>
+                ))}
+              </ul>
+              <span>{project[key].year}</span>
+              
               </div>
               ))}
           </div>
           
         );
-      })} */}
-      <div className="box">
-        
-        <div className="circle-1"></div>
-        <h2>The movie database</h2>
-        <div className="box-container-2">
+      })}
 
-        <img src={exm1} alt="exm1"></img>
-        <ul>
-          <li>React</li>
-          <li>Sass</li>
-          <li>Rest API</li>
-        </ul>
-        </div>
-        
-      </div>
       <button>Home</button>
     </div>
   );
