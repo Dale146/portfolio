@@ -9,7 +9,18 @@
                     "sass",
                     "github"
                 ],
-                "year":"2024"
+                "year":"2024",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend orci magna, ut dapibus enim sagittis sit amet. Integer laoreet, sapien sed varius commodo, quam ex ultricies lacus, eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo eu, maximus interdum tellus. Donec consequat efficitur nibh.",
+                "highlight":[
+                    "Lorem ipsum dolor sit amet, consectetur adipi",
+                    "Cras eleifend orci magna",
+                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
+                ],
+                "insight":[
+                    "Lorem ipsum dolor sit amet, consectetur adipi",
+                    "Cras eleifend orci magna",
+                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
+                ]
             },
             "Bubble-Lab":{
                 "title":"Bubble Lab",
@@ -19,7 +30,18 @@
                     "PHP",
                     "github"
                 ],
-                "year":"2024"
+                "year":"2024",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend orci magna, ut dapibus enim sagittis sit amet. Integer laoreet, sapien sed varius commodo, quam ex ultricies lacus, eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo eu, maximus interdum tellus. Donec consequat efficitur nibh.",
+                "highlight":[
+                    "Lorem ipsum dolor sit amet, consectetur adipi",
+                    "Cras eleifend orci magna",
+                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
+                ],
+                "insight":[
+                    "Lorem ipsum dolor sit amet, consectetur adipi",
+                    "Cras eleifend orci magna",
+                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
+                ]
             },
             "Portfolio":{
                 "title":"Portfolio Site",
@@ -29,7 +51,19 @@
                     "sass",
                     "Fetch API"
                 ],
-                "year":"2024"
+                "year":"2024",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend orci magna, ut dapibus enim sagittis sit amet. Integer laoreet, sapien sed varius commodo, quam ex ultricies lacus, eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo eu, maximus interdum tellus. Donec consequat efficitur nibh.",
+                "highlight":[
+                    "Lorem ipsum dolor sit amet, consectetur adipi",
+                    "Cras eleifend orci magna",
+                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo ",
+                    "ies lacus, eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo eu, maximus interdum tellus. Done"
+                ],
+                "insight":[
+                    "Lorem ipsum dolor sit amet, consectetur adipi",
+                    "Cras eleifend orci magna",
+                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
+                ]
             }
         }
         
