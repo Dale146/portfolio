@@ -24,11 +24,15 @@ const MobileProjects = () => {
   console.log(projects)
 
     const [hiddenContent, setHiddenContent] = useState(false)
-    const displayHiddenContent = () => {
+    const displayHiddenContent = (index, title) => {
       setHiddenContent(!hiddenContent);
+      console.log(title)
     }
+    
   return (
+    
     <div className="mobile-projects">
+      <h1>Projects</h1>
         {projects.map((project, index) => {
         const projectKeys = Object.keys(project);
 
