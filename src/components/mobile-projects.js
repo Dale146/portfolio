@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import downArrow from "../images/icons/bookmark.svg";
 
 
 
@@ -56,6 +57,35 @@ const MobileProjects = () => {
                     </div>
                   </div>
                 </div>
+                <div className="prj-addons">
+                  
+                  <div className="card-2">
+                  <div className="down-arrow">
+                    <img src={downArrow} alt="downArrow"></img>
+                  </div>
+                    
+                    <div className="prj-description">
+                      <h3>Description</h3><br/>
+                      <span>{project[key].description}</span>
+                    </div>
+                    <div className="prj-highlights">
+                      <h3>Highlights</h3>
+                        <ul>
+                          {project[key].highlight && project[key].highlight.map((highlight, i) => (
+                            <li key={i}>{highlight}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    <div className="prj-insights">
+                    <h3>Insights</h3>
+                      <ul>
+                        {project[key].insight && project[key].insight.map((insight, i) => (
+                         <li key={i}>{insight}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
               </div>
             ))}
           </div>
