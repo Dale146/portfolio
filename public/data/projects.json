@@ -2,8 +2,10 @@
     "projects":[
         {
             "MovieSquirrel": {
+                "logo":"images/favicon.svg",
                 "title":"MovieSquirrel",
                 "imgSrc":"images/movie.png",
+                "shortdes":"Movie Data Base Built with React",
                 "mainTools":[
                     "react",
                     "sass",
@@ -23,8 +25,10 @@
                 ]
             },
             "Bubble-Lab":{
+                "logo":"images/favicon.svg",
                 "title":"Bubble Lab",
-                "imgSrc":"images/react.svg",
+                "imgSrc":"",
+                "shortdes":"Movie Data Base Built with React",
                 "mainTools":[
                     "Wordpress",
                     "PHP",
@@ -44,8 +48,10 @@
                 ]
             },
             "Portfolio":{
+                "logo":"images/favicon.svg",
                 "title":"Portfolio Site",
-                "imgSrc":"images/css.svg",
+                "imgSrc":"",
+                "shortdes":"Movie Data Base Built with React",
                 "mainTools":[
                     "react",
                     "sass",
