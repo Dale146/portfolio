@@ -1,5 +1,4 @@
 
-
 .mobile-projects{
     background: linear-gradient(45deg, #fbda61, #ff5acd);
 }
@@ -162,7 +161,6 @@
     align-items: center;
     justify-content: center;
     top: -250px;
-    
     transform: translateY(50%);
     
     
@@ -174,5 +172,12 @@
     }
 }
 .cover-container:hover .card-2{
-    height: 1000px;
+    height:max-content;
+    
+    .prj-highlights{
+        transform: translateY(-20%);
+    }
+    .prj-insights{
+        transform: translateY(-40%);
+    }
 }
