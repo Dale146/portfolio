@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import downArrow from "../images/icons/bookmark.svg";
+import sky from "../images/sky.png";
 import ladder from "../images/ladder.svg";
 
 
@@ -26,17 +27,28 @@ const MobileProjects = () => {
 
     
   return (
-    
+    <div className="projects-background">
+
 
     
     <div className="mobile-projects">
-      
+      <div className="project-flex-container">
+      <div className="ladder">
+       
+      </div>
+      <div className="sky1">
+        <img src={sky} alt="sky"/>
+      </div>
+    
 
       {projects.map((project, index) => {
         const projectKeys = Object.keys(project);
   
         return (
           <div className="mobile-container" key={index}>
+            <div className="heading">
+              <h1><span>Pro</span><span>jects</span></h1>
+              </div>
             {projectKeys.map((key) => (
               <div className="cover-container" key={`${index}-${key}`}>
                 <div className="card">
@@ -102,10 +114,11 @@ const MobileProjects = () => {
           </div>
         );
       })}
+      </div>
       <button>Home</button>
       
     </div>
-    
+    </div>
   );
 };
 
