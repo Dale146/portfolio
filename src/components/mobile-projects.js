@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import downArrow from "../images/icons/bookmark.svg";
+import ladder from "../images/ladder.svg";
 
 
 
@@ -25,8 +26,12 @@ const MobileProjects = () => {
 
     
   return (
+    
+
+    
     <div className="mobile-projects">
-      <h1>Projects</h1>
+      
+
       {projects.map((project, index) => {
         const projectKeys = Object.keys(project);
   
@@ -60,9 +65,9 @@ const MobileProjects = () => {
                 <div className="prj-addons">
                   
                   <div className="card-2">
-                  <div className="down-arrow">
+                    <div className="down-arrow">
                     <img src={downArrow} alt="downArrow"></img>
-                  </div>
+                    </div>
                     
                     <div className="prj-description">
                       <h3>Description</h3><br/>
@@ -84,6 +89,12 @@ const MobileProjects = () => {
                         ))}
                       </ul>
                     </div>
+                    <div className="bottom-image">
+                     <img src={project[key].logo} alt={project[key].imgAlt} />
+                    </div>
+                    <div className="year">
+                      <span>{project[key].year}</span>
+                    </div>
                   </div>
                   </div>
               </div>
@@ -92,7 +103,9 @@ const MobileProjects = () => {
         );
       })}
       <button>Home</button>
+      
     </div>
+    
   );
 };
 

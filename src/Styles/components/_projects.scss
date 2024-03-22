@@ -1,6 +1,8 @@
 
 .mobile-projects{
     background: linear-gradient(45deg, #fbda61, #ff5acd);
+    height: auto;
+    position: relative;
 }
 .mobile-container{
     display: flex;
@@ -77,14 +79,7 @@
         width: 80%;
     }
 }
-.card:hover .prj-content .prj-image{
-    transform: translateY(50px);
-    img{
-    width: 130%;
-    
-    }
-    
-}
+
 .card .prj-content .prj-details{
     padding: 40px;
     text-align: center;
@@ -94,9 +89,7 @@
 
 
 }
-.card:hover .prj-content .prj-details{
-    transform: translateY(0px);
-}
+
 .card .prj-content .prj-details h2 span{
     font-size:0.75em;
     font-weight: 500;
@@ -171,6 +164,18 @@
         
     }
 }
+@media screen and (max-width:1020px ){
+    .card:hover .prj-content .prj-image{
+        transform: translateY(50px);
+        img{
+        width: 130%;
+        
+        }
+        
+    }
+    .card:hover .prj-content .prj-details{
+        transform: translateY(0px);
+    }
 .cover-container:hover .card-2{
     height:max-content;
     
@@ -180,4 +185,90 @@
     .prj-insights{
         transform: translateY(-40%);
     }
+    .bottom-image{
+        transform: translateY(0);
+    }
+    .year span{
+        transform: translateY(-30px);
+    }
+}
+}
+.card-2 .bottom-image{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(200px);
+    width: 100px;
+    padding: 20px;
+}
+
+.card-2 .year span{
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        text-align: end;
+        font-family: verdana;
+        padding: 10px;
+        font-size: 33px;
+        color: rgba(238, 104, 104, 0.471);
+        text-shadow: rgb(0, 0, 0) -2px 14px 8px;
+    
+}
+@media screen and (min-width:1020px ) {
+    .prj-addons,
+    .card-2{
+        width: unset;
+        height: 600px;
+        overflow: auto;
+        max-width: 800px;
+        scrollbar-width: none;
+        
+    }
+    .bottom-image{
+        visibility: hidden;
+    }
+    .cover-container{
+        display: flex;
+        
+    }
+    .card-2{
+        
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0%;
+        transition: 0.5s;
+        
+    }
+    .card .prj-content .prj-image{
+        transform: translateY(40px);
+    }
+    .card .prj-content .prj-details{
+        transform: translateY(0);
+    }
+    .card:hover .prj-content .prj-image{
+        
+        img{
+        width: 130%;
+        
+        }
+        
+    }
+    .card-2:hover{
+        background: rgba(238, 204, 204, 0.882);
+    }
+    .card{
+        min-width:350px ;
+        height: 600px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0;
+    }
+    .card-2 .prj-description, .prj-highlights, .prj-insights{
+        padding: 40px;
+    }
+
+    .card-2 .year span{
+        bottom: unset;
+    }
+    
 }

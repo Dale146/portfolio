@@ -48,7 +48,7 @@
                 ]
             },
             "Portfolio":{
-                "logo":"images/favicon.svg",
+                "logo":"images/portfolio-favicon.svg",
                 "title":"Portfolio Site",
                 "imgSrc":"",
                 "shortdes":"Movie Data Base Built with React",
