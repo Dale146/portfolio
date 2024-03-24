@@ -39,6 +39,21 @@ const Home = () => {
 
     const [isOverlayOpen, setOverlayOpen] = useState(false);
 
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    // Check window width on resize
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
 
   // import array from json file
   const dogString = homeArrays && homeArrays.dog && homeArrays.dog.paragraphs;
@@ -158,12 +173,19 @@ const Home = () => {
             alt="tiantian"
             onClick={() => handleOpenModal(dogString, dogName, dogMoreString, dogAvatar)}/>
         </div>
-        <Link to="/about">
+        {windowWidth < 600 ? ( 
 
-        <div className="hole">
-          <img src={hole} alt="hole"/>
-        </div>
-        </Link>
+          <Link to="/about">
+            <div className="hole">
+              <img src={hole} alt="hole"/>
+            </div>
+          </Link>
+
+          ) : (
+            <div className="hole">
+            <img onClick={() => setOverlayOpen(!isOverlayOpen)} src={hole} alt="hole"/>
+          </div>
+          )}
         <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
           <div className="modal-avatar">
 

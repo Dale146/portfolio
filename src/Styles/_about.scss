@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 3;
     
     
 }
@@ -40,6 +41,7 @@
 .about-image-container{
     max-height: 30vh;
     overflow: hidden;
+    z-index: 3;
     
 }
 // move the image position
@@ -47,10 +49,12 @@
     object-position:0 -190px;
 }
 .animation-flex{
+    
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
+    z-index: 3;
 
     
 }
@@ -67,6 +71,7 @@
 .show-component{
     display: block;
     animation: slideInFromBottom 1s ease-in-out;
+    overflow: auto;
 }
 
 .hide-component{
@@ -88,3 +93,39 @@
 }
 
 
+@media screen and (min-width:500px ){
+    .about,
+    .about-container,
+    .gradient-background{
+        width: 375px;
+        height: 812px;
+    }
+    .about{
+        overflow: hidden;
+    }
+    .about-image-container{
+        max-height: unset;
+        overflow: unset;
+        
+        
+    }
+    
+
+    .about-image-container img{
+        width: 200px;
+        object-position: unset;
+    }
+    .about-container{
+        justify-content: flex-start;
+    }
+    .status-component,
+    .initial-content,
+    .inside-content,
+    .show-component,
+    .fill-content{
+        height: 500px;
+    }
+    .about-content{
+        padding: 20px;
+    }
+}

@@ -10,7 +10,7 @@ $circle-size: 200px;
   width: 100%;
   position: absolute;
   filter: blur(10px); 
-  z-index: -999;
+  z-index: 2;
   overflow: hidden;
 }
     // circle style
@@ -25,8 +25,7 @@ $circle-size: 200px;
       height: $circle-size;
       background-color: #64b5f6; 
       filter: blur(5px); 
-      animation: horizontal-animation 6s infinite linear alternate,
-                 vertical-animation 10s infinite linear alternate;
+
     }
     &.circle-right-top {
       right: -20%;
@@ -45,6 +44,18 @@ $circle-size: 200px;
       background-color: #ffb74d; 
       filter: blur(5px); 
     }
+    @media screen and (max-width:500px) {
+      &.circle-left-bottom{
+        animation: horizontal-animation 6s infinite linear alternate,
+        vertical-animation 10s infinite linear alternate;
+      }
+    }
+    @media screen and (min-width:500px) {
+      &.circle-left-bottom{
+        animation: desktop-horizontal-animation 6s infinite linear alternate,
+        desktop-vertical-animation 10s infinite linear alternate;
+      }
+    }
 }
 
 @keyframes horizontal-animation{
@@ -57,6 +68,16 @@ $circle-size: 200px;
         top: calc(100vh - $circle-size);
     }
 }
+@keyframes desktop-horizontal-animation{
+  to{
+      left: calc(500px - $circle-size);
+  }
+}
+@keyframes desktop-vertical-animation{
+  to{
+      top: calc(932px - $circle-size);
+  }
+}
 
 .menu-options{
     display: flex;
@@ -64,6 +85,7 @@ $circle-size: 200px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 
 }
 .btns {
@@ -161,3 +183,39 @@ $circle-size: 200px;
 }
 
 
+@media screen and (min-width:500px) {
+  .gradient-background{
+    width: 375px;
+    height: 812px;
+    border-radius: 40px;
+}
+  .bottom-nav{
+    all: unset;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    
+  }
+  .btn-container{
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 60px;
+  }
+  .back-btn{
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 3;
+  }
+  .menu-btn{
+    position: absolute;
+    left: 100px;
+    z-index: 2;
+  }
+  .btns{
+    width: 100px;
+    height: 100px;
+  }
+}
