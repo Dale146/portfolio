@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import Typewriter from "../components/typeWriter";
 import Mymenu from "../components/menu";
 import MyKits from "../components/kits";
-import tian from "../images/tiantian.jpg";
+import saotome from "../images/saotome.jpg";
 import upArrow from "../images/icons/iconmonstr-caret-up-circle-lined.svg";
 import leftArrow from "../images/icons/iconmonstr-angel-left-thin.svg";
 import rightArrow from "../images/icons/iconmonstr-angel-right-thin.svg";
@@ -91,7 +91,7 @@ const About = () => {
 
                 {/* container for the image */}
                 <section className="about-image-container">
-                    <img src={tian} alt="tiantian"/>
+                    <img src={saotome} alt="tiantian"/>
                 </section>
 
                   {/* ----------------------------the container to make the button out of the animation class, so that it is not flipped-------------------------------- */}
@@ -121,7 +121,7 @@ const About = () => {
                           {selectedComponent != null && (
                               <div className="inside-content">
                               <h2>{optionsMenu[selectedComponent].title}</h2>
-                              <p><Typewriter text={optionsMenu[selectedComponent].description} delay={10}/></p>
+                              <p><Typewriter text={optionsMenu[selectedComponent].description} delay={1}/></p>
                           </div>
                           )}
                           {/* Show fill-content when initial-content and showMenu are both hidden */}

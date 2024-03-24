@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Modal from "../components/modal";
 import Typewriter from "../components/typeWriter";
 import Backgrounds from "../components/background";
+import About from "./About";
+import OverLay from "../components/overlay";
 
 // import images
 
 import dog1 from "../images/dog1.png";
+import hole from "../images/hole.png";
+
 
 
 
@@ -31,6 +36,8 @@ const Home = () => {
   
     // Ensure toolIcons is an array
     const homeArrays = fetchedData || [];
+
+    const [isOverlayOpen, setOverlayOpen] = useState(false);
 
 
   // import array from json file
@@ -132,6 +139,13 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* <Link to="/about" >
+        <button onClick={() => setOverlayOpen(!isOverlayOpen)}>
+          open
+        </button>
+      </Link> */}
+
+
       {/* give the array and the name */}
       {/* <button className="other" onClick={() => handleOpenModal(secondString, secondName, secondParagraph)}>
         other
@@ -144,6 +158,12 @@ const Home = () => {
             alt="tiantian"
             onClick={() => handleOpenModal(dogString, dogName, dogMoreString, dogAvatar)}/>
         </div>
+        <Link to="/about">
+
+        <div className="hole">
+          <img src={hole} alt="hole"/>
+        </div>
+        </Link>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
           <div className="modal-avatar">
 
@@ -154,7 +174,12 @@ const Home = () => {
             {/* use modal text */}
           <p className="typewriter-content"><Typewriter key={modalText} text={modalText} delay={50}/> </p>
         </Modal>
+        <OverLay isOpen={isOverlayOpen} onClose={() => setOverlayOpen(!isOverlayOpen)}>
+        <About/>
+        </OverLay>
       </div>
+
+
     </div>
   );
 };
