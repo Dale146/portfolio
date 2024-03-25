@@ -34,7 +34,7 @@
   }
   
   .overlay-controls {
-    position: absolute;
+    
     top: 20px; /* 控件距离手机顶部的距离 */
     right: 20px; /* 控件距离手机右侧的距离 */
   }
@@ -65,4 +65,20 @@
     border-radius: 40px; /* 设置手机边框圆角 */
     
   }
-  
+    .overlay-close{
+    position: absolute; 
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    background-color:hwb(2 20% 5%);
+    border: 10px solid #ff7e5f ;
+    bottom: 80px;
+    right: 130px;
+    z-index: 80;
+    
+    
+
+    img{
+        width: 80px;
+    }
+  }

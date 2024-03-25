@@ -155,6 +155,7 @@ $circle-size: 200px;
     background: transparent;
     border: 1px solid #ff7e5f;
     border: none;
+    cursor: pointer;
     
 
   
@@ -171,9 +172,11 @@ $circle-size: 200px;
   
   .menu-btn:active img {
     transform: translateY(-20%);
+    z-index: 99;
   }
   
 .left-right-arrow{
+  cursor: pointer;
     border: none;  
     background: transparent;
     
@@ -217,5 +220,8 @@ $circle-size: 200px;
   .btns{
     width: 100px;
     height: 100px;
+  }
+  .back-btn{
+    display: none;
   }
 }

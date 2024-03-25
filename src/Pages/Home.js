@@ -10,6 +10,7 @@ import OverLay from "../components/overlay";
 
 import dog1 from "../images/dog1.png";
 import hole from "../images/hole.png";
+import phone from "../images/smartphone.png";
 
 
 
@@ -173,7 +174,7 @@ const Home = () => {
             alt="tiantian"
             onClick={() => handleOpenModal(dogString, dogName, dogMoreString, dogAvatar)}/>
         </div>
-        {windowWidth < 600 ? ( 
+        {/* {windowWidth < 600 ? ( 
 
           <Link to="/about">
             <div className="hole">
@@ -185,7 +186,7 @@ const Home = () => {
             <div className="hole">
             <img onClick={() => setOverlayOpen(!isOverlayOpen)} src={hole} alt="hole"/>
           </div>
-          )}
+          )} */}
         <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
           <div className="modal-avatar">
 
@@ -194,7 +195,15 @@ const Home = () => {
           <p>{selectName}</p>
           </div>
             {/* use modal text */}
-          <p className="typewriter-content"><Typewriter key={modalText} text={modalText} delay={50}/> </p>
+          <p className="typewriter-content"><Typewriter key={modalText} text={modalText} delay={50}/> </p>        
+          {windowWidth < 600 ? ( 
+          <Link to="/about">
+            <img className="mobile-phone" onClick={() => setOverlayOpen(!isOverlayOpen)} src={phone} alt="phone"/>
+          </Link>
+          ) : (
+            <img className="mobile-phone" onClick={() => setOverlayOpen(!isOverlayOpen)} src={phone} alt="phone"/>
+          )}
+            
         </Modal>
         <OverLay isOpen={isOverlayOpen} onClose={() => setOverlayOpen(!isOverlayOpen)}>
         <About/>
