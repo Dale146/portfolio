@@ -8,16 +8,16 @@ import "./style.scss";
 
 function App() {
   return (
+    <Projects/> 
+    // <Router>
+    //   <Routes>
     
-    <Router>
-      <Routes>
+    //   {/* < Route exact path ="/" element ={<Home/>}/>
+    //   <Route path= "/about" element ={<About/>}/> */}
+     
     
-      < Route exact path ="/" element ={<Home/>}/>
-      <Route path= "/about" element ={<About/>}/>
-      {/* <Projects/> */}
-    
-      </Routes>
-    </Router>
+    //   </Routes>
+    // </Router>
   );
 }
 
