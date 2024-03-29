@@ -4,20 +4,22 @@ import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-rou
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Projects from './Pages/Projects';
+import Cover from './Pages/Cover';
 import "./style.scss";
 
 function App() {
   return (
-    <Projects/> 
-    // <Router>
-    //   <Routes>
-    
-    //   {/* < Route exact path ="/" element ={<Home/>}/>
-    //   <Route path= "/about" element ={<About/>}/> */}
+    <Router>
+      <Routes>
+     
+      <Route exact path ="/" element ={<Cover/>}/>
+      <Route path= "/home" element ={<Home/>}/>
+      <Route path="/projects" element={<Projects/>}/> 
+      <Route path= "/about" element ={<About/>}/>
      
     
-    //   </Routes>
-    // </Router>
+      </Routes>
+    </Router>
   );
 }
 
