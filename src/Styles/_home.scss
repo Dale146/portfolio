@@ -114,6 +114,7 @@ img {
 
 .fav{
     position: absolute;
+
     width: 30%;
     top: 1%;
     left: 1%;
@@ -150,8 +151,29 @@ img {
     
     
 }
+@media screen and (min-width:1920px) {
+    .bg1{
+        width: 100%;
+    }
+    .bg2{
+        width: 100%;
+        left: 0;
+    }
+    .bg3{
+        width: 100%;
+        left: 0%;
+    }
+    .bg4{
+        width: 100%;
+    }
+
+}
 .links
 {
+    position: absolute;
+    width: 100%;
+    bottom: 20%;
+    z-index: 50;
     background-color: #ffffff73;
     text-align: center;
     

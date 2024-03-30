@@ -9,8 +9,10 @@ import OverLay from "../components/overlay";
 // import images
 
 import dog1 from "../images/dog1.png";
-import hole from "../images/hole.png";
+import hole from "../images/hole.svg";
 import phone from "../images/smartphone.png";
+import mask from "../images/mask.svg";
+
 
 
 
@@ -152,6 +154,7 @@ const Home = () => {
     
     
   };
+  
 
   return (
     <div className="home">
@@ -187,6 +190,13 @@ const Home = () => {
             <img onClick={() => setOverlayOpen(!isOverlayOpen)} src={hole} alt="hole"/>
           </div>
           )} */}
+          <Link to="/projects">
+            <div className="hole">
+              <img className="hole-img" src={hole} alt="hole"/>
+              <div className="mask-box">
+              </div>
+            </div>
+          </Link>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
           <div className="modal-avatar">
 

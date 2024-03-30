@@ -8,14 +8,7 @@ import bg4 from "../images/background-4.svg";
 import favicon from "../images/favicon.png";
 
 const Cover = () => {
-    const [scramble, setScramble] = useState(false);
 
-    const handleTitleClick = () => {
-      setScramble(true);
-      setTimeout(() => {
-        setScramble(false);
-      }, 1000);
-    };
   
     return(
         <>
@@ -31,9 +24,7 @@ const Cover = () => {
                       <h1>DALE ZHENG<br/>
                       <span>FrontEnd Web Developer</span></h1>
             </div>
-                <div className="links">
-                    <Link className="fade-in-out" to="/projects">PRESS HERE TO START</Link>
-                </div>
+
             </div>
             </div>
             </div>
@@ -46,6 +37,9 @@ const Cover = () => {
             <img className="bg3" src={bg3} alt="bg3"/>
             <img className="bg4" src={bg4} alt="bg4"/>
             </div>
+            <div className="links">
+                    <Link className="fade-in-out" to="/home">PRESS HERE TO START</Link>
+                </div>
         </div>
 
 
