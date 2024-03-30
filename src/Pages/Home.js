@@ -5,13 +5,15 @@ import Typewriter from "../components/typeWriter";
 import Backgrounds from "../components/background";
 import About from "./About";
 import OverLay from "../components/overlay";
+import Loader from "../components/loader";
+
 
 // import images
 
 import dog1 from "../images/dog1.png";
 import hole from "../images/hole.svg";
 import phone from "../images/smartphone.png";
-import mask from "../images/mask.svg";
+
 
 
 
@@ -23,14 +25,20 @@ const Home = () => {
 
     // fetch json
     const [fetchedData, setFetchedData] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
   
     // change the status of data
     useEffect(() => {
+
       fetch('data/home.json')
         .then((response) => response.json())
         .then((data) => {
           // set fetchedData = data
           setFetchedData(data);
+          setTimeout(() => {
+            setIsLoading(false); // 模拟加载完成
+          }, 500);
+          
         })
         .catch((error) => {
           console.log('failed fetching data', error);
@@ -110,7 +118,7 @@ const Home = () => {
   const handleOpenModal = (array, name, secondArray, avatar) => {
     // change the name of the array
     setSelectName(name);
-
+    
     setSelectAvatar(avatar);
     // change the array
     setSelectString(array);
@@ -121,10 +129,12 @@ const Home = () => {
     
     // switch by name of the array
       switch (name){
-        case "dog":
+        case "tiantian":
           if (dogTrigger === false){
+            
             setDogTrigger(true);
           }else{
+            
             setCurrentIndex(0);
             setModalText(secondArray[0]);
             setSelectString(secondArray);
@@ -157,71 +167,51 @@ const Home = () => {
   
 
   return (
-    <div className="home">
-      {/* <Link to="/about" >
-        <button onClick={() => setOverlayOpen(!isOverlayOpen)}>
-          open
-        </button>
-      </Link> */}
-
-
-      {/* give the array and the name */}
-      {/* <button className="other" onClick={() => handleOpenModal(secondString, secondName, secondParagraph)}>
-        other
-      </button> */}
-      <div className="container">
-        <Backgrounds/>
-        <div className="dog">
-          <img
-            src={dog1}
-            alt="tiantian"
-            onClick={() => handleOpenModal(dogString, dogName, dogMoreString, dogAvatar)}/>
-        </div>
-        {/* {windowWidth < 600 ? ( 
-
-          <Link to="/about">
-            <div className="hole">
-              <img src={hole} alt="hole"/>
-            </div>
-          </Link>
-
-          ) : (
-            <div className="hole">
-            <img onClick={() => setOverlayOpen(!isOverlayOpen)} src={hole} alt="hole"/>
-          </div>
-          )} */}
-          <Link to="/projects">
-            <div className="hole">
-              <img className="hole-img" src={hole} alt="hole"/>
-              <div className="mask-box">
-              </div>
-            </div>
-          </Link>
-        <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
-          <div className="modal-avatar">
-
-          <img src={selectAvatar} alt={selectName}/>
-          {/* use select name */}
-          <p>{selectName}</p>
-          </div>
-            {/* use modal text */}
-          <p className="typewriter-content"><Typewriter key={modalText} text={modalText} delay={50}/> </p>        
-          {windowWidth < 600 ? ( 
-          <Link to="/about">
-            <img className="mobile-phone" onClick={() => setOverlayOpen(!isOverlayOpen)} src={phone} alt="phone"/>
-          </Link>
-          ) : (
-            <img className="mobile-phone" onClick={() => setOverlayOpen(!isOverlayOpen)} src={phone} alt="phone"/>
-          )}
-            
-        </Modal>
-        <OverLay isOpen={isOverlayOpen} onClose={() => setOverlayOpen(!isOverlayOpen)}>
-        <About/>
-        </OverLay>
+<div className="home">
+  {isLoading && <Loader/>}
+  
+  {!isLoading && (
+    <div className="container">
+      <Backgrounds/>
+      <div className="dog">
+        <img
+          src={dog1}
+          alt="tiantian"
+          onClick={() => handleOpenModal(dogString, dogName, dogMoreString, dogAvatar)}
+        />
       </div>
 
+      <Link to="/projects">
+        <div className="hole">
+          <img className="hole-img" src={hole} alt="hole"/>
+          <div className="mask-box"></div>
+        </div>
+      </Link>
 
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} nextParagraph={showNextParagraph}>
+        <div className="modal-avatar">
+          <img src={selectAvatar} alt={selectName}/>
+          <p>{selectName}</p>
+        </div>
+        <p className="typewriter-content"><Typewriter key={modalText} text={modalText} delay={50}/> </p>
+        
+        {windowWidth < 600 ? (
+          <Link to="/about">
+            <img className="mobile-phone" onClick={() => setOverlayOpen(!isOverlayOpen)} src={phone} alt="phone"/>
+          </Link>
+        ) : (
+          <img className="mobile-phone" onClick={() => setOverlayOpen(!isOverlayOpen)} src={phone} alt="phone"/>
+        )}
+      </Modal>
+
+      <OverLay isOpen={isOverlayOpen} onClose={() => setOverlayOpen(!isOverlayOpen)}>
+        <About/>
+      </OverLay>
     </div>
+  )}
+</div>
+
+
   );
 };
 

@@ -168,6 +168,16 @@
     bottom: 0;
     z-index: 10;
     width: 200%;
+    
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0); /* 初始位置，不移动 */
+  }
+  100% {
+    transform: translateX(-100%); /* 最终位置，往左移动整个宽度的 100% */
+  }
 }
 .bg2{
     position: absolute;
@@ -229,5 +239,72 @@
     letter-spacing: 8px;
     font-family: 'game',italic;
     animation: fade-in 2s infinite; /* 设置动画效果，4s 为一个周期 */
+  }
+  
+.loader{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: beige;
+}
+
+.ld-1{
+    
+    animation: moveLeft 3s linear forwards;
+}
+.ld-3{
+    animation: moveLeft 2s linear forwards;
+}
+.ld-2{
+    animation: moveRight 5s linear forwards;
+}
+@keyframes moveLeft {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(-100%); 
+      
+    }
+  }
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(100%); 
+      
+    }
+  }
+  .zoom-in {
+    animation: zoomIn 3s linear forwards;
+    overflow: hidden;
+    scrollbar-width: 0px;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1); /* 初始大小 */
+    }
+    100% {
+      transform: scale(1.5); /* 最终放大到 1.5 倍大小 */
+    }
+  }
+  .loader-container {
+    position: fixed; /* 使用 fixed 定位以覆盖整个视口 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 隐藏滚动条 */
+    animation: zindex 3s linear forwards;
+  }
+  @keyframes zindex{
+    0%{
+        z-index: 999;
+    }
+    100%{
+        z-index: 0;
+    }
   }
   

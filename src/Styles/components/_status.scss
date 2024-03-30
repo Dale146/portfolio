@@ -86,7 +86,22 @@ $circle-size: 200px;
     justify-content: center;
     align-items: center;
     z-index: 3;
+    padding-top:20px ;
+    
 
+}
+.inside-content h2{
+  font-size:2em;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.inside-content p,
+.initial-content p{
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.5;
+  font-weight: 600;
 }
 .btns {
     background: #c61dff;
@@ -98,13 +113,18 @@ $circle-size: 200px;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    color: #fff;
+    color: orange;
     font-size: 14px;
+    font-size:1.25em;
+    font-weight: 600;
+
     box-shadow: inset 10px 10px 10px rgba(190,1,254,0.05),
                 15px 25px 10px rgba(190,1,254,0.1),
                 15px 20px 20px rgba(190,1,254,0.1),
                 inset -10px -10px 15px rgba(255,255,255,0.5);
                 border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+         
+                 
     
 }
 .btns::before {
@@ -141,12 +161,19 @@ $circle-size: 200px;
     height: 130px;
     background-color:hwb(2 20% 5%);
     border: 10px solid #ff7e5f ;
-    left: 10%;
+    z-index: 20;
     transform: translateY(20%);
 
     img{
         width: 80px;
     }
+
+}
+@media screen and (max-width:500px) {
+  .menu-btn{
+    transform: translateX(50px);
+    z-index: 10;
+  }
 }
 .menu-btn {
     border-radius: 15px;

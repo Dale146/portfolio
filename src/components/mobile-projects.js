@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import downArrow from "../images/icons/bookmark.svg";
 import sky from "../images/sky.png";
 import ladder from "../images/ladder.svg";
@@ -37,7 +38,10 @@ const MobileProjects = () => {
        
       </div>
       <div className="sky1">
+        <Link to ="/home">
+
         <img src={sky} alt="sky"/>
+        </Link>
       </div>
     
 
@@ -68,8 +72,8 @@ const MobileProjects = () => {
                         ))}
                       </div>
                       <div className="actionBtn">
-                        <button>GitHub</button>
-                        <button>Live Site</button>
+                      <a href={project[key].github}> <button>GitHub</button></a>
+                      <a href={project[key].github}> <button className="button-two">Live Site</button></a>
                       </div>
                     </div>
                   </div>
@@ -115,7 +119,7 @@ const MobileProjects = () => {
         );
       })}
       </div>
-      <button>Home</button>
+      
       
     </div>
     </div>

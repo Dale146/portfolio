@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
 import Typewriter from "../components/typeWriter";
 import Mymenu from "../components/menu";
 import MyKits from "../components/kits";
@@ -132,7 +133,9 @@ const About = () => {
                             <div className="btn-container">
 
                             <button className="back-btn">
+                              <Link to="/home">
                               <img src={Home} alt="home"/>
+                              </Link>
                             </button>
                             {/* give the value of null */}
                             <button className="menu-btn" onClick={() => displayComponent(null)}>

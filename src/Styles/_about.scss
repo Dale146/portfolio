@@ -31,6 +31,7 @@
     flex-direction: column;
     margin-left: 1rem;
     margin-right: 1rem;
+    scrollbar-width: none;
 }
 .show-component{
     height: 50vh;
@@ -40,13 +41,16 @@
 // images in the about
 .about-image-container{
     max-height: 30vh;
+    width: 100%;
     overflow: hidden;
     z-index: 3;
+    object-fit: cover;
     
 }
 // move the image position
 .about-image-container img {
-    object-position:0 -190px;
+    
+
 }
 .animation-flex{
     
@@ -72,6 +76,7 @@
     display: block;
     animation: slideInFromBottom 1s ease-in-out;
     overflow: auto;
+    scrollbar-width: none;
 }
 
 .hide-component{

@@ -22,11 +22,12 @@ const MyKits = () => {
 
   return (
     <div className="my-kits">
+      <h2>Tools I Use</h2>
       {toolIcons.map((tool, index) => {
         const toolKeys = Object.keys(tool);
 
         return (
-          <div key={index}>
+          <div className="kits-content" key={index}>
             {toolKeys.map((key) => (
               <img key={key} src={tool[key].imgSrc} alt={tool[key].imgAlt} />
             ))}
