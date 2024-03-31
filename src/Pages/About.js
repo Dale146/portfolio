@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Typewriter from "../components/typeWriter";
 import Mymenu from "../components/menu";
 import MyKits from "../components/kits";
-import saotome from "../images/saotome.jpg";
+import saotome from "../images/1.png";
 import upArrow from "../images/icons/iconmonstr-caret-up-circle-lined.svg";
 import leftArrow from "../images/icons/iconmonstr-angel-left-thin.svg";
 import rightArrow from "../images/icons/iconmonstr-angel-right-thin.svg";
