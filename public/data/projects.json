@@ -7,11 +7,12 @@
                 "imgSrc":"images/movie.png",
                 "shortdes":"Movie Data Base Built with React",
                 "mainTools":[
-                    "react",
-                    "sass",
-                    "github"
+                    "React",
+                    "Sass",
+                    "Github"
                 ],
                 "github":"https://www.google.ca/",
+                "livesite":"",
                 "year":"2024",
                 "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend orci magna, ut dapibus enim sagittis sit amet. Integer laoreet, sapien sed varius commodo, quam ex ultricies lacus, eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo eu, maximus interdum tellus. Donec consequat efficitur nibh.",
                 "highlight":[
@@ -26,14 +27,14 @@
                 ]
             },
             "Bubble-Lab":{
-                "logo":"images/favicon.svg",
+                "logo":"images/bubble-lab-logo.png",
                 "title":"Bubble Lab",
-                "imgSrc":"",
-                "shortdes":"Movie Data Base Built with React",
+                "imgSrc":"images/movie.png",
+                "shortdes":"an online ordering website developed with WordPress and WooCommerce",
                 "mainTools":[
                     "Wordpress",
                     "PHP",
-                    "github"
+                    "Woocommerce"
                 ],
                 "year":"2024",
                 "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend orci magna, ut dapibus enim sagittis sit amet. Integer laoreet, sapien sed varius commodo, quam ex ultricies lacus, eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo eu, maximus interdum tellus. Donec consequat efficitur nibh.",

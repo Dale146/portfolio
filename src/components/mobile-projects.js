@@ -73,7 +73,7 @@ const MobileProjects = () => {
                       </div>
                       <div className="actionBtn">
                       <a href={project[key].github}> <button>GitHub</button></a>
-                      <a href={project[key].github}> <button className="button-two">Live Site</button></a>
+                      <a href={project[key].livesite}> <button className="button-two">Live Site</button></a>
                       </div>
                     </div>
                   </div>
