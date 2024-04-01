@@ -36,7 +36,7 @@ const Home = () => {
           // set fetchedData = data
           setFetchedData(data);
           setTimeout(() => {
-            setIsLoading(false); // 模拟加载完成
+            setIsLoading(false); 
           }, 500);
           
         })

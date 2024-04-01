@@ -8,14 +8,16 @@
         "name":"tiantian",
         "avatar":"images/tian.png",
         "paragraphs":[
-            "this is paragraph 1",
-            "this is paragraph 2",
-            "this is paragraph 3"
+            "Welcome to Dale's portfolio showcase!",
+            "Is there anything I can help you understand or answer?",
+            
+            "You can click on the phone icon in the bottom right corner of this chat!"
         ],
         "more":[
-            "more 1",
-            "more 2",
-            "more 3"
+            "Welcome back! Did you check out that phone icon in the bottom right corner?.",
+            "I don't have much else to say because, well, I'm only programmed with so much"
+            
+            
         ]
         
         },

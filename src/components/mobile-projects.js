@@ -97,14 +97,7 @@ const MobileProjects = () => {
                           ))}
                         </ul>
                       </div>
-                    <div className="prj-insights">
-                    <h3>Insights</h3>
-                      <ul>
-                        {project[key].insight && project[key].insight.map((insight, i) => (
-                         <li key={i}>{insight}</li>
-                        ))}
-                      </ul>
-                    </div>
+
                     <div className="bottom-image">
                      <img src={project[key].logo} alt={project[key].imgAlt} />
                     </div>

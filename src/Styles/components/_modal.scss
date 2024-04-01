@@ -57,11 +57,15 @@
 }
 .typewriter-content{
     width: 80%;
+    margin-right: 50px;
     
 }
 
 
 @media screen and (max-width: 800px) {
+    .modal{
+        height: 20vh;
+    }
     .modal-avatar{
         img{
             width: 90%;

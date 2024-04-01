@@ -177,6 +177,7 @@
 .prj-highlights,
 .prj-insights{
     padding: 40px;
+    line-height: 2em;
 }
 .card-2 span{
     font-size:1em;
@@ -236,7 +237,8 @@
     height:max-content;
     
     .prj-highlights{
-        transform: translateY(-20%);
+        transform: translateY(-10%);
+        margin-bottom: 20%;
     }
     .prj-insights{
         transform: translateY(-40%);
