@@ -13,6 +13,7 @@ import Loader from "../components/loader";
 import dog1 from "../images/dog1.png";
 import hole from "../images/hole.svg";
 import phone from "../images/smartphone.png";
+import bird from "../images/bird.png";
 
 
 
@@ -69,11 +70,12 @@ const Home = () => {
   // import array from json file
   const dogString = homeArrays && homeArrays.dog && homeArrays.dog.paragraphs;
   const dogAvatar = homeArrays && homeArrays.dog && homeArrays.dog.avatar;
-  const secondString = homeArrays && homeArrays.secondString && homeArrays.secondString.paragraphs;
+  const birdAvatar = homeArrays && homeArrays.bird && homeArrays.bird.avatar;
+  const birdString = homeArrays && homeArrays.bird && homeArrays.bird.paragraphs;
   const dogName = homeArrays && homeArrays.dog && homeArrays.dog.name;
-  const secondName = homeArrays && homeArrays.secondString && homeArrays.secondString.name;
+  const birdName = homeArrays && homeArrays.bird && homeArrays.bird.name;
   const dogMoreString = homeArrays && homeArrays.dog && homeArrays.dog.more;
-  const secondParagraph = homeArrays && homeArrays.secondString && homeArrays.secondString.more;
+  const birdMoreString = homeArrays && homeArrays.bird && homeArrays.bird.more;
   
 
   // select the name thats used
@@ -141,7 +143,7 @@ const Home = () => {
           };
           break;
           
-        case "this is the name":
+        case "Accessory":
           if(secondTrigger === false){
             setSecondTrigger(true);
 
@@ -173,11 +175,18 @@ const Home = () => {
   {!isLoading && (
     <div className="container">
       <Backgrounds/>
-      <div className="dog">
+      <div className="animals dog">
         <img
           src={dog1}
           alt="tiantian"
           onClick={() => handleOpenModal(dogString, dogName, dogMoreString, dogAvatar)}
+        />
+      </div>
+      <div className="animals bird">
+        <img
+          src={bird}
+          alt="bird"
+          onClick={() => handleOpenModal(birdString, birdName, birdMoreString, birdAvatar)}
         />
       </div>
 

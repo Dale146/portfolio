@@ -111,7 +111,9 @@ const About = () => {
 
                           {/* give class if true/false */}
                           <div className={`${hideContent ? "initial-content" : "hide-initial-content"}`}>
-                          <p>...</p>
+                          <p>...<br/>Why are all the pictures about my dogs?<br/>It's weird for me to post my picture online...<br/><h3>
+                            
+                            You can ask me questions with the <bold>↑</bold> button beside the Home button!</h3></p>
                           </div>
                           {/* give class if true/false */}
                           <div className={`${showMenu ? "show-component" : "hide-component"}`}>

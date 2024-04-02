@@ -5,11 +5,11 @@
         "option-3":"Contact Me"
     },
     "dog":{
-        "name":"tiantian",
+        "name":"Tiantian",
         "avatar":"images/tian.png",
         "paragraphs":[
             "Welcome to Dale's portfolio showcase!",
-            "Is there anything I can help you understand or answer?",
+            "Is there anything I can help you?",
             
             "You can click on the phone icon in the bottom right corner of this chat!"
         ],
@@ -21,18 +21,17 @@
         ]
         
         },
-    "secondString":{
-        "name":"this is the name",
+    "bird":{
+        "name":"Accessory",
+        "avatar":"images/bird.webp",
         "paragraphs":[
-            "sahdujnasikdsa",
-            "ashdiksadsadadd",
-            "1298371312",
-            "123487y912asdas"
+            "Don't bother me",
+            "I'm only an accessory.",
+            "And yea, that's my name.",
+            "Although, the hole down there makes me curious!"
         ],
         "more":[
-            "萨达杀的撒旦阿斯顿阿三",
-            "阿斯顿撒撒旦sadhu哦耨大厦的",
-            "啊是第几骚客大苏打飒飒"
+            "I said don't bother!"
         ]
     }
 }

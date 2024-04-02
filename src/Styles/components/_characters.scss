@@ -1,5 +1,5 @@
 // limit the div for the dog image, so that only show one image.
-.dog{
+.animals{
     position: absolute;
     width: 100px;
     height: 100px;
@@ -15,7 +15,7 @@
 }
 // make the image larger
 // and animation
-.dog img{
+.animals img{
     width: 500px;
     position: absolute;
     bottom: 20%;
@@ -23,4 +23,12 @@
     animation: flow 0.5s step-start infinite;
     
     
+}
+.bird{
+    right: 10%;
+    top: 20%;
+    width: 70px;
+}
+.bird img{
+
 }

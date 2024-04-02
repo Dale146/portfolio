@@ -90,8 +90,13 @@ $circle-size: 200px;
     
 
 }
+.menu-options::after{
+  content: "";
+  width: 120px;
+  height: 120px;
+}
 .inside-content h2{
-  font-size:2em;
+  text-decoration: underline;
   font-weight: 500;
   opacity: 0.5;
 }
@@ -102,6 +107,12 @@ $circle-size: 200px;
   color: #555;
   line-height: 1.5;
   font-weight: 600;
+  max-height: 200px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.initial-content p{
+  max-height: 300px;
 }
 .btns {
     background: #c61dff;
@@ -242,6 +253,7 @@ $circle-size: 200px;
   .menu-btn{
     position: absolute;
     left: 100px;
+    bottom: -170px;
     z-index: 2;
     
   }
@@ -251,5 +263,14 @@ $circle-size: 200px;
   }
   .back-btn{
     display: none;
+  }
+  .menu-options::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+  }
+  .inside-content p{
+    line-height: 1.5;
+    max-height: 300px;
   }
 }

@@ -29,7 +29,9 @@ const MyKits = () => {
         return (
           <div className="kits-content" key={index}>
             {toolKeys.map((key) => (
+              <div>
               <img key={key} src={tool[key].imgSrc} alt={tool[key].imgAlt} />
+              </div>
             ))}
           </div>
         );

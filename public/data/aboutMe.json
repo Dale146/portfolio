@@ -3,21 +3,25 @@
         {
         "About me":{
             "title":"Dale",
-            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibus gravida augue rutrum vitae. Curabitur turpis turpis, sagittis in aliquet at, tempor nec elit. Praesent tincidunt auctor vehicula. Phasellus auctor odio nibh."
+            "description":"I'm Han Wei Zheng, but you can call me Dale if you like. Honestly, I'm not big on putting myself out there online, but I do love a good round of gaming. That's where a ton of my portfolio inspiration comes from."
         },
-        "story":{
-            "title":"Story",
-            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibu."
+        "Portfolio":{
+            "title":"About This Site",
+            "description":"I designed this website all by myself, drawing inspiration from games I've enjoyed, like Stardew Valley. Take the dialogue box on the homepage, for example—it's reminiscent of RPG conversations, adding a fun vibe to the site. Plus, I've added more interactive elements, such as triggering new dialogues when users chat with the same character multiple times."
         },
-        "background":{
-            "title":"background",
-            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum dignissim magna, faucibu.",
-            "school":"bcit"
+        "Portfolio Two":{
+            "title":"About This Site 2",
+            "description":"However, you might have noticed that there's no option functionality here. Actually, I did implement this feature to allow you to respond to these animals and trigger different dialogues. But I felt that this feature was quite similar to the About page, so I decided to remove it."
+            
             
         },
-        "random":{
-            "title":"this is the title",
-            "description":"tjos oashdasdsa"
+        "porfolio Three":{
+            "title":"About This Site 3",
+            "description":"For the dialogue box effect on the homepage, I developed a component in React. This allows the component to be easily integrated into any website, rather than being a static function. Similarly, on the About Me page, I created a component that dynamically generates new options and output based on a JSON document. This approach enhances flexibility and reusability across different pages of the website."
+        },
+        "Fun Fact":{
+            "title":"Some Fun Facts",
+            "description":"I've broken down the details about this website into multiple paragraphs here because I don't have much personal information to share, but I do need to showcase the functionality of my website. So, I've included all of this here. It's actually a good thing—it keeps the text for my project from becoming too bulky."
         }
     }
     
@@ -35,7 +39,44 @@
             "React":{
                 "imgSrc":"images/react.svg",
                 "imgAlt":"React"
+            },
+            "Wordpress":{
+                "imgSrc":"images/wordpress.svg",
+                "imgAlt":"Wordpress"
+            },
+            "PHP":{
+                "imgSrc":"images/php.svg",
+                "imgAlt":"Php"
+            },
+            "Javascript":{
+                "imgSrc":"images/js.svg",
+                "imgAlt":"Javascript"
+            },
+            "Github":{
+                "imgSrc":"images/git.svg",
+                "imgAlt":"Github"
+            },
+            "Sass":{
+                "imgSrc":"images/sass.svg",
+                "imgAlt":"Sass"
+            },
+            "Bootstrap":{
+                "imgSrc":"images/bootstrap.svg",
+                "imgAlt":"Bootstrap"
+            },
+            "Woocommerce":{
+                "imgSrc":"images/woocommerce.svg",
+                "imgAlt":"woocommerce"
+            },
+            "Photoshop":{
+                "imgSrc":"images/ps.svg",
+                "imgAlt":"Photoshop"
+            },
+            "Illustrator":{
+                "imgSrc":"images/ai.svg",
+                "imgAlt":"Illustrator"
             }
+
             
         }
     ]
