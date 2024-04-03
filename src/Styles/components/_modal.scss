@@ -1,7 +1,7 @@
 .modal{
     border: solid 6px #8c7957;
     width: 100%;
-    height: 15vh;
+    height: 20vh;
     background-image: linear-gradient(to right, rgb(203, 174, 139), rgb(238, 208, 165), rgb(203, 174, 139));
     position: absolute;
     bottom: 0;
@@ -37,6 +37,7 @@
         flex-grow: 1;
         height: auto;
         overflow: hidden;
+        max-width: 200px;
         
         
 

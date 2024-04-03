@@ -131,7 +131,7 @@ const Home = () => {
     
     // switch by name of the array
       switch (name){
-        case "tiantian":
+        case "Tiantian":
           if (dogTrigger === false){
             
             setDogTrigger(true);
