@@ -1,5 +1,6 @@
 // App.js
 import React from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -9,6 +10,9 @@ import Loader from "./components/loader";
 import "./style.scss";
 
 function App() {
+  useEffect(() => {
+    document.title = "Dale's Portfolio Website"; 
+  }, []);
   return (
     <Router>
       <Routes>
