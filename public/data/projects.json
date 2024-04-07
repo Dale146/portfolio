@@ -5,13 +5,15 @@
             "Portfolio":{
                 "logo":"images/portfolio-favicon.svg",
                 "title":"Portfolio Site",
-                "imgSrc":"images/movie.png",
+                "imgSrc":"images/portfolio.png",
                 "shortdes":"Dynamic Portfolio Site built with React",
                 "mainTools":[
                     "React",
                     "Sass",
                     "Fetch API"
                 ],
+                "github":"https://github.com/Dale146/portfolio",
+                "livesite":"https://hzhengweb.com",
                 "year":"2024",
                 "description":"Our project is a dynamic portfolio website built using React and JSON. It automatically generates 'Projects' and 'About Me' sections based on the content added, without altering the website's style. Leveraging extensive animations, the website offers a smooth user experience. The home page features dynamic dialogue controlled by a switch, ensuring that conversations between different characters are no longer static but dynamically controlled through a component that listens and modifies subsequent outputs.",
                 "highlight":[
@@ -19,14 +21,29 @@
                     "Engaging Animations: Enjoy a visually captivating experience with smooth animations throughout the site.",
                     "Interactive Home Page: Experience dynamic conversations between characters, enhancing visitor engagement.",
                     "Efficient Data Handling: Leveraging React and JSON, the site efficiently manages data for seamless integration of dynamic content."
-                ],
-                "insight":[
-                    "Lorem ipsum dolor sit amet, consectetur adipi",
-                    "Cras eleifend orci magna",
-                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo ",
-                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo ",
-                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
                 ]
+
+            },
+            "Bubble-Lab":{
+                "logo":"images/bubble-lab-logo.png",
+                "title":"Bubble Lab",
+                "imgSrc":"images/bubblelab.png",
+                "shortdes":"an online ordering website developed with WordPress and WooCommerce",
+                "mainTools":[
+                    "Wordpress",
+                    "PHP",
+                    "Woocommerce"
+                ],
+                "github":"https://github.com/Dale146/Bubble-lab",
+                "livesite":"https://xyzbubbletea.bcitwebdeveloper.ca",
+                "year":"2024",
+                "description":"Our project is an online milk tea ordering service built using WordPress + WooCommerce. It serves as a platform for businesses to offer their milk tea products for online ordering. With WordPress and WooCommerce integration, it enables store owners to easily add their products and showcase them to customers. Additionally, the platform allows businesses to include the locations of their offline stores, providing customers with information on their physical presence. Leveraging WooCommerce's plugin capabilities, customers can conveniently place orders for delivery or pickup, streamlining the ordering process. Furthermore, store owners have the flexibility to customize the website's appearance to align with their brand identity, ensuring a cohesive and engaging user experience.",
+                "highlight":[
+                    "Product Management: Easily add and manage milk tea offerings without technical hassle.",
+                    "Flexible Ordering: Customers can choose delivery or pickup options to suit their preferences.",
+                    "Customizable Branding: Tailor the website's appearance to match your brand's style effortlessly."
+                ]
+
             },
             "MovieSquirrel": {
                 "logo":"images/favicon.svg",
@@ -38,45 +55,19 @@
                     "Sass",
                     "Github"
                 ],
-                "github":"https://www.google.ca/",
-                "livesite":"",
+                "github":"https://github.com/jasperalen07/movie-squirrel",
+                "livesite":"https://hzhengweb.com/movie-squirrel/",
                 "year":"2024",
                 "description":"This project is a movie database website built using React, which utilizes the TMDB API to fetch the latest movie and TV show information. Users can browse various movies and TV shows, including details such as titles, posters, and summaries. Additionally, the website features a bookmarking functionality, allowing users to add their favorite movies and TV shows to a bookmarked list for later viewing or management. With an intuitive interface and access to TMDB's extensive content, this website provides users with a convenient way to explore, discover, and bookmark their favorite movies and TV shows.",
                 "highlight":[
                     "Real-time Updates: Dynamically fetches latest movie data from TMDB API, keeping content up-to-date.",
                     "Bookmarking Feature: Users can add/remove favorite movies, personalizing their bookmarked list.",
                     "Seamless Navigation: Utilizing React's routing, the website offers smooth page transitions without full-page reloads, improving user experience."
-                ],
-                "insight":[
-                    "Lorem ipsum dolor sit amet, consectetur adipi",
-                    "Cras eleifend orci magna",
-                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
                 ]
-            },
-            
-            "Bubble-Lab":{
-                "logo":"images/bubble-lab-logo.png",
-                "title":"Bubble Lab",
-                "imgSrc":"images/movie.png",
-                "shortdes":"an online ordering website developed with WordPress and WooCommerce",
-                "mainTools":[
-                    "Wordpress",
-                    "PHP",
-                    "Woocommerce"
-                ],
-                "year":"2024",
-                "description":"Our project is an online milk tea ordering service built using WordPress + WooCommerce. It serves as a platform for businesses to offer their milk tea products for online ordering. With WordPress and WooCommerce integration, it enables store owners to easily add their products and showcase them to customers. Additionally, the platform allows businesses to include the locations of their offline stores, providing customers with information on their physical presence. Leveraging WooCommerce's plugin capabilities, customers can conveniently place orders for delivery or pickup, streamlining the ordering process. Furthermore, store owners have the flexibility to customize the website's appearance to align with their brand identity, ensuring a cohesive and engaging user experience.",
-                "highlight":[
-                    "Product Management: Easily add and manage milk tea offerings without technical hassle.",
-                    "Flexible Ordering: Customers can choose delivery or pickup options to suit their preferences.",
-                    "Customizable Branding: Tailor the website's appearance to match your brand's style effortlessly."
-                ],
-                "insight":[
-                    "Lorem ipsum dolor sit amet, consectetur adipi",
-                    "Cras eleifend orci magna",
-                    "eget iaculis est dolor a ipsum. Curabitur felis ligula, tincidunt eget justo "
-                ]
+
             }
+            
+
 
         }
         
